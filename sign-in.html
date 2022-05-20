@@ -46,7 +46,6 @@
             </div>
             <script>
                 function openNav() {
-                    console.log ("test")
                     document.getElementById("mySidebar").style.width = "250px";
                 }
                 function closeNav() {
@@ -56,7 +55,6 @@
                     let username = document.querySelector (".user") .value
                     let password = document.querySelector (".password") .value
                     let email = document.querySelector (".email") .value
-                    //console.log("Email", email)
                     let body = JSON.stringify({password:password, username:username, email:email})
                     let responce = await fetch ("http://localhost:3000/b", {body:body, method:"post", headers: {'Content-Type':'application/json'},})
                     let ok = responce.status
