@@ -1,0 +1,76 @@
+<html>
+    <header>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+    </header>
+
+    <body class="flex-container">
+        <div class="header">
+            <div class="header-left">
+                <a href="index.html"><img src="fish.png" height="50" width="50" class="fish"></a>
+                <a href="index.html">
+                    <h1>Testy</h1>
+                </a>
+                <input type="search" id="site-search" name="q" placeholder="" class="mainsearch">
+            </div>
+            <div class="header-right">
+                <a href="log-in.html" class="log-in">Log in</a>
+                <a href="sign-in.html">Sign in</a>
+                <img src="menu.png" height="100" width="100" class="menu" onclick="openNav()">
+            </div>
+
+        </div>
+        <div class="message" id="message">
+            <h1>Check this out</h1>
+                    
+        </div>
+        <div class="center-box">
+            <div class="center_part">
+                <h1 class="hello">Hello User <br> how are you today?</h1>
+                <div class="text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                        invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam 
+                        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem 
+                        ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos 
+                        et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus 
+                        est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
+                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero 
+                        eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus 
+                        est Lorem ipsum dolor sit amet. 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 36;">×</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="animation.html">Animations</a>
+            <a href="#">Contact</a>
+        </div>
+        <script>
+            function openNav() {
+                console.log ("test")
+                document.getElementById("mySidebar").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+            }
+            function reveal() {
+                if (window.scrollY > 300){
+                    document.getElementById("message").classList.add ("active")
+                }
+                else{
+                    document.getElementById("message").classList.remove ("active")
+                }
+            }
+            window.addEventListener("scroll", reveal);
+            reveal();
+        </script>
+    </body>
+
+</html>

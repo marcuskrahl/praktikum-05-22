@@ -1,0 +1,51 @@
+<html>
+    <header>
+        <link rel="stylesheet" type="text/css" href="index.css"> 
+        <link rel="stylesheet" type="text/css" href="log-in.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+    </header>
+    <body class="flex-container">
+            <div class="header">
+                <div class="header-left">
+                    <a href="index.html"><img src="fish.png" height="50" width="50" class="fish"></a>
+                    <a href="index.html"><h1>Testy</h1></a>
+                    <input type="search" id="site-search" name="q" placeholder="" class="mainsearch">
+                </div>
+                <div class="header-right">
+                    <a href="log-in.html" class="log-in">Log in</a>
+                    <a href="sign-in.html">Sign in</a>
+                    <img src="menu.png" height="100" width="100" class="menu" onclick="openNav()">
+                </div>
+              
+            </div>
+            <div class="center-box2">
+                <div class="center_part2 grid">
+                    <div class="a"><div class="b" style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(Anemonenfisch-Clownfisch-Orange.jpg);"><p>Clownfish</p></div></div>
+                    <ul class="left">
+                        <li>Common Name:Clownfish</li>
+                        <li>Scientific Name:Amphiprioninae</li>
+                        <li>Average Life Span In The Wild:6 to 10 years</li>
+                        <li>Size:4.3 inches</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 36;">×</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="animation.html">Animations</a>
+                <a href="#">Contact</a>
+            </div>
+            <script>
+                function openNav() {
+                    console.log ("test")
+                    document.getElementById("mySidebar").style.width = "250px";
+                }
+                function closeNav() {
+                    document.getElementById("mySidebar").style.width = "0";
+                }
+            </script>
+    </body>
+</html>

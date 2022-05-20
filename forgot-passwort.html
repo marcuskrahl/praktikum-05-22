@@ -1,0 +1,62 @@
+<html>
+    <header>
+        <link rel="stylesheet" type="text/css" href="index.css"> 
+        <link rel="stylesheet" type="text/css" href="log-in.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+    </header>
+    <body class="flex-container">
+            <div class="header">
+                <div class="header-left">
+                    <a href="index.html"><img src="fish.png" height="50" width="50" class="fish"></a>
+                    <a href="index.html"><h1>Testy</h1></a>
+                    <input type="search" id="site-search" name="q" placeholder="" class="mainsearch">
+                </div>
+                <div class="header-right">
+                    <a href="log-in.html" class="log-in">Log in</a>
+                    <a href="sign-in.html">Sign in</a>
+                    <img src="menu.png" height="100" width="100" class="menu" onclick="openNav()">
+                </div>
+              
+            </div>
+            <div class="center-box2" >
+                <div class="center_part2">
+                    <h1>Forgot password</h1>
+                    <br>
+                    <p class="left">Please enter your <br> username to restore your password</p>
+                    <h2 class="left">Username:</h2>
+                    <input type="search" id="site-search" name="q" placeholder="Type your username" class="mainLoginInput user left">
+                    <button onclick="return Login()" class="button">restore</button>
+                </div>
+            </div>
+            <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 36;">×</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="animation.html">Animations</a>
+                <a href="#">Contact</a>
+            </div>
+            <script>
+                function openNav() {
+                    document.getElementById("mySidebar").style.width = "250px";
+                }
+                function closeNav() {
+                    document.getElementById("mySidebar").style.width = "0";
+                }
+                async function Login() {
+                    let username = document.querySelector (".user") .value
+                    let body = JSON.stringify({username:username})
+                    let responce = await fetch ("http://localhost:3000/test", {body:body, method:"post", headers: {'Content-Type':'application/json'},})
+                    let ok = responce.status
+                    if (ok == 200) {
+                        window.location = "/index.html"
+                        return
+                    }
+                    else {
+                        alert("You entered a wrong username")
+                    }
+                }
+            </script>
+    </body>
+</html>

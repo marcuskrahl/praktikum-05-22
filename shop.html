@@ -1,0 +1,70 @@
+<html>
+    <header>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700&display=swap" rel="stylesheet">
+    </header>
+
+    <body class="flex-container">
+        <div class="header">
+            <div class="header-left">
+                <a href="index.html"><img src="fish.png" height="50" width="50" class="fish"></a>
+                <a href="index.html">
+                    <h1>Testy</h1>
+                </a>
+                <input type="search" id="site-search" name="q" placeholder="" class="mainsearch">
+            </div>
+            <div class="header-right">
+                <a href="index.html" class="log-in">Log out</a>
+                <img src="menu.png" height="100" width="100" class="menu" onclick="openNav()">
+            </div>
+
+        </div>
+        <div class="center-box">
+            <div class="center_part">
+                <h1 class="hello">Hello <span id="username"></span> <br> how are you today?</h1>
+                <button class="explore" onclick="openShop()">Go explore</button>
+                <div id="collection" class="collection">
+                    <div class="a" onclick="clownfish()"><div class="b" style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(Anemonenfisch-Clownfisch-Orange.jpg);"><p>Clownfish</p></div></div>
+                    <div class="a"><div class="b"style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(4K-Fish-Desktop-Wallpaper.jpg);"><p>Fisch</p></div></div>
+                    <div class="a"><div class="b"style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(OIP.jfif);"><p>Fisch</p></div></div>
+                    <div class="a"><div class="b"style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(unsplash-image-uu8sDKvTx-g.jpg);"><p>Fisch</p></div></div>
+                    <div class="a"><div class="b"style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(1612270904378,schmetterlingsbuntbarsch-100~_v-16x9@2dXL_-77ed5d09bafd4e3cf6a5a0264e5e16ea35f14925.jpg);"><p>Fisch</p></div></div>
+                    <div class="a"><div class="b"style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(discus-fish-1943755_1920.jpg);"><p>Fisch</p></div></div>
+                    <div class="a"><div class="b"style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(Anemonenfisch-Clownfisch-Orange.jpg);"><p>Fisch</p></div></div>
+                    <div class="a"><div class="b"style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(Anemonenfisch-Clownfisch-Orange.jpg);"><p>Fisch</p></div></div>
+                    <div class="a"><div class="b"style=" background-image: linear-gradient(to bottom, rgba(255,0,0,0) 66%, rgba(0,0,0,1)), url(Anemonenfisch-Clownfisch-Orange.jpg);"><p>Fisch</p></div></div>
+                </div>
+            </div>
+        </div>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="font-size: 36;">×</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="animation.html">Animations</a>
+            <a href="#">Contact</a>
+        </div>
+        <script>
+            function openNav() {
+                console.log ("test")
+                document.getElementById("mySidebar").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+            }
+            function openShop() {
+                document.getElementById("collection").style.width = "80%";
+            }
+            function clownfish() {
+                window.location = "/clownfish.html"
+            }
+            // const querySelector = window.location.search;
+            // const parameters = new URLSearchParams(querySelector)
+            // const value = parameters.get("username")
+            let username = window.localStorage.getItem ("username")
+            document.getElementById("username").textContent = username
+        </script>
+    </body>
+
+</html>

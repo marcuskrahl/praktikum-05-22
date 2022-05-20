@@ -1,0 +1,150 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+div{
+    background-color: rgba(30, 51, 39, 0.911);
+    width: 300px;
+    height: 300px;
+}
+
+
+@keyframes myAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+a {
+    color: #BFC0C0;
+    text-decoration: none;
+    letter-spacing: 1px;
+  }
+.button {
+    display: inline-flex;
+    height: 40px;
+    width: 150px;
+    border: 2px solid #BFC0C0;
+    margin: 20px 20px 20px 20px;
+    color: #BFC0C0;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .8em;
+    letter-spacing: 1.5px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+#button-3 {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #button-3 a {
+    position: relative;
+    transition: all .45s ease-Out;
+  }
+#circle {
+    width: 0%;
+    height: 0%;
+    opacity: 0;
+    line-height: 40px;
+    border-radius: 50%;
+    background: #BFC0C0;
+    position: absolute;
+    transition: all .5s ease-Out;
+    top: 20px;
+    left: 70px;
+  }
+  
+  #button-3:hover #circle {
+    width: 200%;
+    height: 500%;
+    opacity: 1;
+    top: -70px;
+    left: -70px;
+  }
+  
+  #button-3:hover a {
+    color: #2D3142;
+  }
+  .box{
+    background-color: white;
+    border-radius: 15px;
+    height: 50px;
+    width: 50px;
+    box-shadow: 5px 5px 10px rgba(82, 82, 82, 0.473);
+    animation: animation 4s ease 0s infinite normal forwards;
+  }
+  @keyframes animation {
+      0% {
+          height: 50px;
+          width: 50px;
+      }
+      25% {
+          height: 200px;
+          width: 50px;
+      }
+      50% {
+          height: 200px;
+          width: 400px;
+      }
+      75% {
+          width: 50px;
+          height: 200px;
+      }
+      90% {
+          width: 50px;
+          height: 50px;
+      }
+      100%{
+          width: 50px;
+          height: 50px;
+      }
+  }
+  svg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+  
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+  
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes rotate {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  body {
+  min-height: 500vh;
+}
