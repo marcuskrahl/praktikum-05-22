@@ -1,8 +1,11 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="animation.css">
-    </head>
-    <body>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="animation.css">
+</head>
+
+<body>
+    <div class="fakebody">
         <div></div>
         <div class="button" id="button-3">
             <div id="circle"></div>
@@ -10,42 +13,64 @@
         </div>
         <div class="box"></div>
         <svg width="100" height="100" viewBox="0 0 24 24">
-            <path d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+            <path
+                d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
         </svg>
+        <!-- <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+
+            <g>
+             <title>Layer 1</title>
+             <line stroke-linecap="undefined" stroke-linejoin="undefined" id="svg_1" y2="432" x2="436" y1="112" x1="163" stroke="#000" fill="none"/>
+             <ellipse ry="135" rx="127.5" id="svg_2" cy="281" cx="223.5" stroke="#000" fill="none"/>
+             <path id="svg_4" d="m210,161l214,0l0,170l-214,0l0,-170z" opacity="undefined" stroke-linecap="undefined" stroke-linejoin="undefined" stroke="#000" fill="none"/>
+            </g>
+           </svg> -->
+    </div>
+    <div id="weiß"></div>
+    <div class="videocontainer">
         <video src="ball.mp4" loop id="video" preload></video>
-        <script>
-            let video = document.getElementById ("video")
-            // video.addEventListener(
-            //     "mousemove",
-            //     (event) => {
-            //         let x = event.clientX
-            //         console.log (x)
-            //         let xrel = x/video.getBoundingClientRect ().width
-            //         console.log (xrel)
-            //         video.currentTime = video.duration * xrel
-            //      }
-                
-            // )
-            window.addEventListener (
-                "scroll",
-                (event) => {
-                    let y = video.getBoundingClientRect ().top
-                    let topd = y+window.scrollY
-                    let percent = (window.scrollY - topd)/(video.scrollHeight - window.innerHeight)
-                    let percentb = Math.min(Math.max(percent,0),1)
-                    video.currentTime = video.duration * percentb
-                }
-            )
-            window.addEventListener(
+    </div>
+    <div id="weiß"></div>
+    <script>
+        let video = document.getElementById("video")
+        // video.addEventListener(
+        //     "mousemove",
+        //     (event) => {
+        //         let x = event.clientX
+        //         console.log (x)
+        //         let xrel = x/video.getBoundingClientRect ().width
+        //         console.log (xrel)
+        //         video.currentTime = video.duration * xrel
+        //      }
+
+        // )
+        window.addEventListener(
+            "scroll",
+            (event) => {
+                // let y = video.getBoundingClientRect ().top
+                // let y = window.scrollY ()
+                // let topd = y+window.scrollY
+                // let percent = (window.scrollY - topd)/(video.scrollHeight - window.innerHeight)
+                let container = document.querySelector(".videocontainer")
+                let dimension = container.getBoundingClientRect()
+                // let percent = (window.scrollY - dimension.top) / dimension.height
+                let percent = - dimension.top / dimension.height
+                console.log (percent, dimension)
+                let percentb = Math.min(Math.max(percent, 0), 1)
+                video.currentTime = video.duration * percentb
+            }
+        )
+        window.addEventListener(
             "scroll",
             () => {
                 document.body.style.setProperty(
-                "--scroll",
-                window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+                    "--scroll",
+                    window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
                 );
             },
             false
-            );
-        </script>
-    </body>
+        );
+    </script>
+</body>
+
 </html>

@@ -1,9 +1,11 @@
-body {
-    display: flex;
-    justify-content: center;
+.fakebody{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
 }
 div{
-    background-color: rgba(30, 51, 39, 0.911);
+    /* background-color: rgba(30, 51, 39, 0.911); */
     width: 300px;
     height: 300px;
 }
@@ -131,6 +133,7 @@ a {
     left: 50%;
     margin-top: -50px;
     margin-left: -50px;
+    z-index: 2;
   
     animation: rotate 1s linear infinite;
     animation-play-state: paused;
@@ -147,4 +150,17 @@ a {
   }
   body {
   min-height: 500vh;
+}
+video{
+  position: sticky;
+  top: 0;
+}
+.videocontainer{
+  height: 500vh;
+  position: relative;
+}
+#weiß{
+  height: 100vh;
+  width: 100%;
+  background-color: white;
 }
