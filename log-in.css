@@ -1,5 +1,5 @@
 .center_part2{
-    width: 30%;
+    width: max(30%, 500px);
     height: 90%;
     border-radius: 30px 30px 0 0;
     background-color: rgb(72, 202, 228);
@@ -13,6 +13,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    margin-top: 100px;
 }
 .apps{
     background-color: rgb(144, 224, 239);
@@ -45,7 +46,6 @@ input{
     border-radius: 50px;
     margin-left: 5%;
     width: 85%;
-    height: 10%;
     padding-left: 60px;
     font-size: large;
     background-size: 50px;
@@ -74,10 +74,14 @@ input:focus{
     font-family: 'Manrope', Arial, Helvetica, sans-serif;
     color: rgb(3, 4, 94);
 }
+.mainLoginInput{
+    min-height: 100px;
+}
 .button {
     /* align-self: flex-end; */
     margin-top: auto;
     margin-left: auto;
+    cursor: pointer;
 }
 .left {
     display: flex;
