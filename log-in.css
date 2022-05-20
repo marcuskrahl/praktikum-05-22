@@ -49,7 +49,7 @@ input{
     padding-left: 60px;
     font-size: large;
     background-size: 50px;
-    background-position: 8px 20px;
+    background-position: 8px 22px;
     background-repeat: no-repeat;
 }
 .password{
@@ -90,8 +90,12 @@ input:focus{
 .forgot{
     margin-top: 10px;
     align-self: flex-end;
-    margin-right: 15px;
+    margin-right: 60px;
 }
 .grid {
     grid-template-rows: 7fr 1fr;
+}
+.log-in{
+    margin-bottom: 15px;
+    margin-right: 15px;
 }

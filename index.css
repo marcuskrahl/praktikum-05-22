@@ -87,8 +87,8 @@ p, a, li, b{
     padding-left: 50px;
     color: rgb(144, 224, 239);
     background-image: url("suche.png");
-    background-size: 35px;
-    background-position: 12px 5px;
+    background-size: 32px;
+    background-position: 12px 7px;
     background-repeat: no-repeat;
 }
 .mainsearch:hover, .mainsearch:focus{
