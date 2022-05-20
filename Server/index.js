@@ -1,7 +1,7 @@
 var cors = require("cors")
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 8080
 const sqlite3 = require('sqlite3').verbose();
 const { select, insert, update, deleteRow} = require('./db_utilities');
 const db = new sqlite3.Database('daten.sqlite');
